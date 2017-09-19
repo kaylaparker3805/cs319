@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Unit 3 Exercise</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+      <h1>Calculator</h1>
+      <script>
+          function addNumbers() {
+              var x;
+              var y;
+              var answer;
+              
+              x = 13;
+              alert(x);
+              y = 7;
+              alert(y);
+              
+              answer = x + y;
+              alert(answer);
+              
+              document.getElementById("equation").innerHTML
+              = x + " plus " + y + " equals " + answer +
+              "!";
+          }
+      </script>
+      <p id="equation"></p>
+      <form name="calculator" action="#" method="get">
+          <p><input type="button" id="add" name="add" value="Add" onclick="addNumbers();">
+             <input type="button" id="Subtract" name="Subtract" value="Subtract" onclick="Subtract();">
+             <input type="button" id="Multiply" name="Multiply" value="Multiply" onclick="Multiply();">
+             <input type="button" id="Divide" name="Divide" value="Divide" onclick="Divide();">
+          </p>
+      </form>
+  </body>
+</html>
