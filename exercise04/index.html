@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <h1>Make a funny story!</h1>
+      <script>
+          function story() {
+              var name = document.selectcolor.person.value;
+              var number = document.selectcolor.num.value;
+              var color = document.selectcolor.selectcolor.value;
+              var animal = document.selectcolor.animals.value;
+              
+              document.getElementById("madlib").innerHTML = "Hello my name is " + name + "! I have " + number + " wonderful " + color + " " + animal + "!";
+          }
+      </script>
+      <form name="selectcolor" action="#" method="get">
+      Name: <input type="text" name="person"><br>
+      <br>
+      Number: <input type="text" name="num"><br>
+      <br>
+      Color:<br>
+          <input type="radio" name="selectcolor" value="Purple">Purple<br>
+          <input type="radio" name="selectcolor" value="Yellow">Yellow<br>
+          <input type="radio" name="selectcolor" value="Red">Red<br><br>
+          
+      Animal (plural):
+          <select name="animals">
+                <option value="Dolphins">Dolphins</option>
+                <option value="Cows">Cows</option>
+                <option value="Dogs">Dogs</option>
+                <option value="Elephants">Elephants</option>
+                <option value="Birds">Birds</option>
+          </select>
+      <p><input type="button" value="Tell story!" onclick="story();"></p>
+      </form>
+      <p id="madlib">
+      </p>
+  </body>
+</html>
