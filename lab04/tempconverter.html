@@ -5,5 +5,39 @@
     <title>tempConverter</title>
   </head>
   <body>
+      <h1>Temperature Converter</h1>
+      <script>
+          function fahrenheittocelcius(){
+              var f;
+              f = document.tempconverter.tempinf.value;
+              var c;
+              c = (f-32)*(5/9);
+              
+              document.tempconverter.tempinc.value = c;
+              
+              document.tempconverter.tempinc.style.backgroundColor = "#99ffcc";
+              document.tempconverter.tempinf.style.backgroundColor = "#ffffff";
+          }
+          
+          function celciustofahrenheit(){
+              var f;
+              
+              var c;
+              c = document.tempconverter.tempinc.value;
+              f = (c*(9/5))+32;
+              
+              document.tempconverter.tempinf.value = f;
+              
+              document.tempconverter.tempinf.style.backgroundColor = "#99ffcc";
+              document.tempconverter.tempinc.style.backgroundColor = "#ffffff";
+          }
+          
+      </script>
+      <form name="tempconverter" id="tempconverter" action="#" method="get">
+          <p>Temperature in Fahrenheit:<br><input type="text" name="tempinf" id="tempinf"></p>
+          <p><input type="button" name="ftoc" id="ftoc" value="F to C" onclick="fahrenheittocelcius();">
+          <input type="button" name="ctof" id="ctof" value="C to F" onclick="celciustofahrenheit();"></p>
+          <p>Temperature in Celcius:<br><input type="text" name="tempinc" id="tempinc"></p>
+      </form>
   </body>
 </html>
