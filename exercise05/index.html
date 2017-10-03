@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>displaymonth</title>
+    </head>
+    <body>
+        <script>
+            function converttomonth(){
+                var number;
+                var month;
+                
+                number = document.monthconverter.monthnumber.value;
+                month = document.monthconverter.numtomon.value;
+                
+            number = number.trim();
+            month = month.trim();
+                
+            if (number == 1){
+                alert("January");
+                return true;
+            } else if (number == 2) {
+                alert("February");
+            } else if (number == 3) {
+                alert("March");
+                return true;
+            } else if (number == 4) {
+                alert("April");
+                return true;
+            } else if (number == 5) {
+                alert("May");
+                return true;
+            } else if (number == 6) {
+                alert("June");
+                return true;
+            } else if (number == 7) {
+                alert("July");
+                return true;
+            } else if (number == 8) {
+                alert("August");
+                return true;
+            } else if (number == 9) {
+                alert("September");
+                return true;
+            } else if (number == 10) {
+                alert("October");
+                return true;
+            } else if (number == 11) {
+                alert("November");
+                return true;
+            } else if (number == 12) {
+                alert("December");
+                return true;
+            } else if (number > 12) {
+                alert("I don't think that number corresponds to a month.");
+                document.monthconverter.numtomon.focus();
+                document.monthconverter.monthnumber.style.backgroundColor = "#ff0000";
+                return false;
+            } else if (number < 1) {
+                alert("I don't think that number corresponds to a month.");
+                document.monthconverter.numtomon.focus();
+                document.monthconverter.monthnumber.style.backgroundColor = "#ff0000";
+                return false;
+            }
+            
+            }
+        </script>
+        <h1>Months</h1>
+        <form name="monthconverter" id="monthconverter" action="#" method="get">
+            <p>Month Number:&nbsp;<input type="text" name="monthnumber" id="monthnumber"></p>
+            <p><input type="button" name="numtomon" id="numtomon" value="Submit" onclick="converttomonth();">
+        </form>
+    </body>
+</html> 
