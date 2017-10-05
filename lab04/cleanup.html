@@ -7,7 +7,7 @@
   <body>
       <h1>Name Cleanup</h1>
       <script>
-          function showname(){
+          //function showname(){
               var first;
               first = document.namecleanup.firstname.value;
               first = first.trim();
@@ -26,6 +26,26 @@
               var full;
               full = first + " " + middle + " " + last;
               document.namecleanup.fullname.value = full;
+          
+          if (first == "") {
+              alert("Please enter your first name!");
+              return false;
+          }
+          
+          if (last == "") {
+              alert("Please enter your first name!");
+              return false;
+          }
+          
+          if (email == "") {
+              alert("Please enter your email address!");
+              return false;
+          }
+          else {
+              return true;
+          }
+              
+              
           }
       </script>
       <p id="name"></p>
