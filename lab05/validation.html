@@ -28,12 +28,12 @@
               return false;
           }
           
-          if (last == "") {
+          else if (last == "") {
               alert("Please enter your last name!");
               return false;
           }
           
-          if (email == "") {
+          else if (email == "") {
               alert("Please enter your email address!");
               return false;
           }
@@ -44,7 +44,7 @@
               
           }
       </script>
-      <form name="validation" id="validation" action=""http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php"" method="get" onsubmit="Validate();">
+      <form name="validation" id="validation" action="http://yoda.cs.uwec.edu/cs319/students/siasmj/echo.php" method="get" onsubmit="return Validate();">
           <p>First name:&nbsp;<input type="text" name="firstname" id="firstname"></p>
           <p>Last name:&nbsp;<input type="text" name="lastname" id="lastname"></p>
           <p>Email address:&nbsp;<input type="text" name="emailaddress" id="emailaddress"></p>
