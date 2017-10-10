@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>formvalidation</title>
+  </head>
+  <body>
+      <script>
+          function Validate() {
+              var color = document.getElementById("fav");
+              
+              if (color.value == "") {
+                  alert("Please enter your favorite color!");
+                  color.focus();
+                  return false;
+              } else if (isNaN(color.value) == false) {
+                  alert("Your submission is invalid. Please enter a color!");
+                  color.focus();
+                  return false;
+              }
+          }
+      </script>
+      <form name="unit6" id="unit6" action="#" method="get" onsubmit="return Validate();">
+          <p>What is your favorite color?&nbsp;<input type="text" name="fav" id="fav"></p>
+          <p><input type="submit" name="go" id="go" value="Submit!"></p>
+      </form>
+  </body>
+</html>
