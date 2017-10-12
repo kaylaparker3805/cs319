@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>guessthenumber</title>
+  </head>
+  <body>
+      <script>
+          function guess_number(){
+              var number = 9;
+              var playerguess = document.game.numberguess.value;
+              playerguess = playerguess.trim();
+              
+              if (playerguess == "") {
+                  alert("Please enter a number between 1 and 10!");
+                  document.game.numberguess.focus();
+                  return false;
+              } else if (isNaN(playerguess) == true) {
+                  alert("Your submission is invalid. Please enter a number!");
+                  document.game.numberguess.select();
+                  return false;
+              } else if (playerguess > 10) {
+                  alert("Please enter a number between 1 and 10!");
+                  document.game.numberguess.select();
+                  return false;
+              } else if (playerguess < 1) {
+                  alert("Please enter a number between 1 and 10!");
+                  dodcument.game.numberguess.select();
+                  return false;
+              } else if (playerguess < number) {
+                  alert("Try again! Hint: Guess a higher number!");
+                  document.game.numberguess.select();
+                  return false;
+              } else if (playerguess > number) {
+                  alert("Try again! Hint: Guess a lower number!");
+                  document.game.numberguess.select();
+                  return false;
+              } else if (playerguess == number) {
+                  alert("Congratulations! You are correct!");
+                  return true;
+              }
+          }
+      </script>
+      <form name="game" id="game" action="#" method="get" onsubmit="return guess_number();">
+          <p>Guess a number between 1 and 10!<input type="text" name="numberguess" id="numberguess"></p>
+          <input type="submit" name="submit" id="submit" value="Submit!">
+      </form>
+  </body>
+</html>
