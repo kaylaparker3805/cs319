@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>validation2</title>
+  </head>
+  <body>
+      <script>
+          function Validate(){
+              //alert("Work!");
+              var first;
+              var last;
+              var email;
+              var age;
+              
+              first = document.validation.firstname.value;
+              //alert("First Name");
+              last = document.validation.lastname.value;
+              //alert("Last Name");
+              email = document.validation.emailaddress.value;
+              //alert("Email Address");
+              age = document.validation.year.value;
+              
+              first = first.trim();
+              last = last.trim();
+              email = email.trim();
+              age = age.trim();
+              
+          if (first == "") {
+              alert("Please enter your first name!");
+              return false;
+          } else if (last == "") {
+              alert("Please enter your last name!");
+              return false;
+          } else if (email == "") {
+              alert("Please enter your email address!");
+              return false;
+          } else if (age == "") {
+              alert("Please enter your age!");
+              document.validation.year.focus();
+              return false;
+          } else if (email.endsWith("@uwec.edu") == false) {
+              alert("Please enter a valid UWEC email address!");
+              return false;
+          } else if (isNaN(age) == true) {
+              alert("Your submission is invalid. Please enter your age!");
+              document.validation.year.focus();
+              return false;
+          } else if (age < 18) {
+              alert("Sorry, you must be 18 or older!");
+              return false;
+          } else {
+              return true;
+          }
+              
+              
+          }
+      </script>
+      <form name="validation" id="validation" action="http://www.mattsias.com/echo.php" method="get" onsubmit="return Validate();">
+          <p>First name:&nbsp;<input type="text" name="firstname" id="firstname"></p>
+          <p>Last name:&nbsp;<input type="text" name="lastname" id="lastname"></p>
+          <p>Email address:&nbsp;<input type="text" name="emailaddress" id="emailaddress"></p>
+          <p>Age:&nbsp;<input type="text" name="year" id="year"></p>
+          <p><input type="submit" name="val" id="val" value="Submit!">
+      </form>
+  </body>
+</html>
